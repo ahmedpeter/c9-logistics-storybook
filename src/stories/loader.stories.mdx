@@ -1,0 +1,33 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { Loader } from '../components/loader';
+import { Theme } from '../Theme';
+import { Icon, H1, H3, Title, SubTitle, } from '../Typo';
+import { Layout, Box, Grid} from '../Layout';
+import '../fonts/fontello/css/cloud9.css';
+import '../fonts/fonts/fonts.css';
+
+<Meta title="Loader" component={Loader} />
+
+
+<H1> Loader Components </H1>
+
+<H3> Loader </H3>
+<SubTitle> Loader component
+</SubTitle>
+
+
+<Preview>
+    <Story name="Loader">
+               <Loader mini />
+                <Loader fullscreen />
+          </Story>
+         
+</Preview>
+
+
+<H3> Component Dependencies </H3>
+
+- npm install --save prop-types
+- npm install --save styled-components
+- npm install --save polished

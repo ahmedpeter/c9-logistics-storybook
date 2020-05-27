@@ -1,0 +1,40 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { Theme } from '../Theme';
+import { Icon, H1, H3, Title, SubTitle, } from '../Typo';
+import { Layout, Box, Grid} from '../Layout';
+import { Button } from '../components/Button';
+import { ModalWrapper, ModalBody } from '../components/Overlays';
+import { Random } from '../Random';
+import '../fonts/fontello/css/cloud9.css';
+import '../fonts/fonts/fonts.css';
+
+const [modalView, setModalView] = useState(false);
+
+<Meta title="Overlays" />
+
+
+<H1> Modal Component </H1>
+
+<H3> Simple Modal </H3>
+<SubTitle> ...</SubTitle>
+
+
+<Preview>
+    <Story name="Modal">
+           <Button color={Theme.PrimaryColor} > Try Basic Modal </Button>
+          
+          </Story>
+         
+</Preview>
+
+
+
+
+<H3> Component Dependencies </H3>
+
+- npm install --save prop-types
+- npm install --save styled-components
+- npm install --save polished
+- npm install --react-select/async
+- npm install --react-select

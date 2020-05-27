@@ -1,0 +1,42 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { Tab, tag } from '../components/Tab';
+import { Theme } from '../Theme';
+import { Icon, H1, H3, Title, SubTitle, } from '../Typo';
+import { Layout, Box, Grid} from '../Layout';
+import '../fonts/fontello/css/cloud9.css';
+import '../fonts/fonts/fonts.css';
+
+<Meta title="Tab" component={Tab} />
+
+
+<H1> Tab Component </H1>
+
+<H3> Tab </H3>
+<SubTitle> Tab component
+</SubTitle>
+
+
+<Preview>
+    <Story name="Tab">
+              <Tab>
+                <InnerTab label="Tab 1" tag={Theme.PrimaryColor}>
+                Tab 1 Content
+                </InnerTab>
+                 <InnerTab label="Tab 2">
+                Tab 2 Content
+                </InnerTab>
+                 <InnerTab label="Tab 3">
+                Tab 3 Content
+                </InnerTab>
+                </Tab>
+          </Story>
+         
+</Preview>
+
+
+<H3> Component Dependencies </H3>
+
+- npm install --save prop-types
+- npm install --save styled-components
+- npm install --save polished

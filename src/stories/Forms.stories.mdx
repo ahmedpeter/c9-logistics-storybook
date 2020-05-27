@@ -1,0 +1,127 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { Input, C9AsyncSelect, C9Select, TextArea } from '../components/Forms';
+import { Button } from '../components/Button';
+import { Theme } from '../Theme';
+import { Icon, H1, H3, Title, SubTitle, } from '../Typo';
+import { Layout, Box, Grid} from '../Layout';
+import { Random } from '../Random';
+import '../fonts/fontello/css/cloud9.css';
+import '../fonts/fonts/fonts.css';
+
+<Meta title="Forms" component={Button} />
+
+
+<H1> Form Components </H1>
+
+<H3> Input </H3>
+<SubTitle> Button components can contain an Icon. This is done placing an Icon component within the Button and setting the icon attribute. The Icons can also be placed on either side of the text but you will need to specify the side attributes.
+</SubTitle>
+
+
+<Preview>
+    <Story name="Input">
+ <Box maxWidth="900px" pad="20px 0">
+          <Grid default="2fr 2fr 2fr" pad="30px 30px">
+          <Box>
+              <Input type="password" />
+            </Box>
+            <Box>
+              <Input
+                type="text"
+              />
+            </Box>
+            <Box>
+               <C9AsyncSelect search />
+            </Box>
+            <Box>
+              <Input
+              label="Numbers"
+                type="number"
+              />
+            </Box>
+            <Box>
+              <Input
+                label="Mobile No."
+                type="phone"
+                placeholder="080 xxxxx"
+              />
+            </Box>
+            <Box>
+              <Input
+                label="Password"
+                type="password"
+              />
+            </Box>
+          </Grid>
+          </Box>
+          </Story>
+         
+</Preview>
+
+
+<H3> Select </H3>
+
+<Preview>
+   <Story name="Select">
+ <Box maxWidth="700px" pad="20px 0">
+          <Grid default="1fr 1fr" pad="10px 30px">
+            <Box>
+              <C9Select
+              label="Default Select"
+                options={[
+                  { label: 'Select 1', value: 'Select 1' },
+                  { label: 'Select 2', value: 'Select 2' },
+                  { label: 'Select 3', value: 'Select 3' },
+                  { label: 'Select 4', value: 'Select 4' },
+                ]}
+                search
+              />
+            </Box>
+            <Box>
+              <C9Select required
+                label="Error Select"
+                error={true}
+                options={[
+                  { label: 'Select 1', value: 'Select 1' },
+                  { label: 'Select 2', value: 'Select 2' },
+                  { label: 'Select 3', value: 'Select 3' },
+                  { label: 'Select 4', value: 'Select 4' },
+                ]}
+              />
+            </Box>
+          </Grid>
+          </Box>
+          </Story>
+</Preview>
+
+
+<H3> Textarea </H3>
+
+
+<Preview>
+   <Story name="Textarea">
+ <Box maxWidth="800px" pad="20px 0">
+          <Grid default="1fr 1fr" pad="10px 30px">
+            <Box>
+              <TextArea
+          label="-"
+        />
+            </Box>
+            <Box>
+              <TextArea
+          label="Textarea"
+        />
+            </Box>
+          </Grid>
+          </Box>
+          </Story>
+</Preview>
+
+<H3> Component Dependencies </H3>
+
+- npm install --save prop-types
+- npm install --save styled-components
+- npm install --save polished
+- npm install --react-select/async
+- npm install --react-select

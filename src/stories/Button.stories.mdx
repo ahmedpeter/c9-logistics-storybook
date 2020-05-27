@@ -1,0 +1,57 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { Button } from '../components/Button';
+import { Theme } from '../Theme';
+import { Icon, H1, H3, Title, SubTitle, } from '../Typo';
+import { Random } from '../Random';
+import { Layout, Box, Grid } from '../Layout';
+import '../fonts/fontello/css/cloud9.css';
+import '../fonts/fonts/fonts.css';
+
+
+<Meta title="Buttons" component={Button} />
+
+<H1> Button Components </H1>
+
+<SubTitle> Button components can contain an Icon. This is done placing an Icon component within the Button and setting the icon attribute. The Icons can also be placed on either side of the text but you will need to specify the side attributes.
+</SubTitle> 
+
+
+
+
+<Preview>
+    <Story name="Buttons">
+ <Box maxWidth="600px" pad="20px 0">
+          <Grid default="2fr 2fr 2fr" pad="30px 30px">
+          <Box>
+             <Button iconed={true} color={Theme.PrimaryColor}> Default Button <i className="icon-floppy" /></Button>
+            </Box>
+            <Box>
+             <Button pale >Default Button </Button>
+            </Box>
+            <Box>
+              <Button progress={true} color={Theme.PrimaryColor} > Default Button </Button>
+            </Box>
+            <Box>
+             <Button color={Theme.PrimaryColor} > Default Button </Button>
+            </Box>
+            <Box>
+             <Button pale iconed={true} >Iconed Button <i className="icon-floppy" /></Button>             
+            </Box>
+            
+          </Grid>
+          </Box>
+          </Story>
+         
+</Preview>
+
+
+
+
+
+
+<H3> Component Dependencies </H3>
+
+- npm install --save prop-types
+- npm install --save styled-components
+- npm install --save polished

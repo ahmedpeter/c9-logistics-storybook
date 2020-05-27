@@ -1,0 +1,65 @@
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+import { action } from '@storybook/addon-actions';
+import { Table, TableWrapper } from '../components/Table';
+import { Theme } from '../Theme';
+import { Icon, H1, H3, Title, SubTitle, } from '../Typo';
+import { Layout, Box, Grid} from '../Layout';
+import '../fonts/fontello/css/cloud9.css';
+import '../fonts/fonts/fonts.css';
+
+<Meta title="Table" component={Table} />
+
+
+<H1> Table Component </H1>
+
+<H3> Table </H3>
+
+
+<Preview>
+    <Story name="Table">
+        <TableWrapper>
+              <Table>
+                <thead>
+                  <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                    <th>Heading 3</th>
+                    <th>Heading 4</th>
+                    <th>Heading 5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                    <td> Data 1 </td>
+                    <td> Data 2 </td>
+                    <td> Data 3 </td>
+                    <td> Data 4 </td>
+                    <td> Data 5 </td>
+                </tr>
+                 <tr>
+                    <td> Data 1 </td>
+                    <td> Data 2 </td>
+                    <td> Data 3 </td>
+                    <td> Data 4 </td>
+                    <td> Data 5 </td>
+                </tr>
+                 <tr>
+                    <td> Data 1 </td>
+                    <td> Data 2 </td>
+                    <td> Data 3 </td>
+                    <td> Data 4 </td>
+                    <td> Data 5 </td>
+                </tr>
+                </tbody>
+              </Table>
+            </TableWrapper>
+   </Story>
+         
+</Preview>
+
+
+<H3> Component Dependencies </H3>
+
+- npm install --save prop-types
+- npm install --save styled-components
+- npm install --save polished
